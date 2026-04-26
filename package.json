@@ -1,0 +1,42 @@
+{
+  "name": "osu-binary",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Binary reader and writer utilities for osu! data formats.",
+  "author": "zzzzv",
+  "license": "MIT",
+  "homepage": "https://github.com/zzzzv/osu-binary#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzzzv/osu-binary.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zzzzv/osu-binary/issues"
+  },
+  "keywords": [
+    "osu"
+  ],
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@typescript/native-preview": "7.0.0-dev.20260328.1",
+    "tsdown": "^0.21.7",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
+  }
+}
